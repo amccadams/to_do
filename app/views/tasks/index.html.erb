@@ -1,0 +1,17 @@
+<h1>List 1</h1>
+<ul>
+	<% @tasks.each do |task| %>
+		<li><%= task.name %></li>
+	<% end %>
+</ul>
+
+<%= link_to "Task", new_task_path %>
+
+<h1>List 2</h1>
+<ul>
+	<% @tasks.each do |task| %>
+		<li><%= task.name %></li>
+	<% end %>
+</ul>
+
+<%= link_to "Task", new_task_path %>
