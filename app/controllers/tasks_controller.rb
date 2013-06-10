@@ -8,8 +8,10 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create ( params[:task] )
+    @task = Task.create(params[:task])
     flash[:notice] = "Your task was added to the list"
     redirect_to :root
   end
+
+  
 end
