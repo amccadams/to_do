@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20130610181242) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "list_id"
   end
 
 end
