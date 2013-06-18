@@ -1,0 +1,16 @@
+<h2><%= @list.title + "To Do List" %></h2>
+
+<% tasks = Task.where(list_id: @list.id) %>
+<%- if tasks.exists? %>
+    <%- tasks.each do |task| %>
+    <li><%= task.name %></li>
+    <% end %>
+     <% end %>
+
+ <p>New Task</p>
+   <%= form_for @task do |f| %>
+   <%= f.hidden_field :list_id, value: @list.id %>
+     <%= f.label :name %>
+    <%= f.text_field :name %>
+   <%= f.submit "Submit Task" %>
+<% end %>
